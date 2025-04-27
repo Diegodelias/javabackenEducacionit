@@ -45,7 +45,7 @@ public class PersonaController {
         @ApiResponse(responseCode = "404" ,description = "no existe" )
     })
     @GetMapping("/{id}")
-    @PreAuthorize("hasAuthority('READ')")
+    @PreAuthorize("hasRole('ADMIN')")
     public ResponseEntity<Persona> getPersonas(@PathVariable Long id) {
         try {
 
