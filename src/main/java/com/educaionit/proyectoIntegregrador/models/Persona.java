@@ -1,7 +1,13 @@
 package com.educaionit.proyectoIntegregrador.models;
 
+import io.swagger.v3.oas.annotations.media.Schema;
+
+@Schema(description = "Representa un cliente")
 public class Persona {
+    @Schema(description = "Id unico de la persona" ,accessMode = Schema.AccessMode.READ_ONLY)
     private Long id;
+
+    @Schema(description = "nombre de la persona" , example="Juan Perez" , required = true)
     private String nombre;
     private String apellido;
     private Direccion direccion;

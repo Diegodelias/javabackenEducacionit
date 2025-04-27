@@ -36,4 +36,8 @@ public class ProductosService {
         productoRepository.delete(id);
 
     }
+
+    public Producto getByNombre(String nombre) {
+        return productoRepository.getByNombre(nombre);
+    }
 }

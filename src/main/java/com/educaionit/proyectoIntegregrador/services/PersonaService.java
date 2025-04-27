@@ -23,6 +23,10 @@ public class PersonaService {
         return personaRepository.findAll();
     }
 
+
+
+    //crear un metodo para obtener Objetio tipo persona response
+
     public Persona getById(Long id) {
         return personaRepository.findBy(id).orElseThrow(NoSuchElementException::new);
     }

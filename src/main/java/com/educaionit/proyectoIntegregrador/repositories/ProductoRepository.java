@@ -35,5 +35,17 @@ public class ProductoRepository {
         productos.removeIf(p -> p.getId().equals(id));
     }
 
+    public Producto getByNombre(String nombre) {
+
+        for (Producto producto : productos) {
+            System.out.println("pd" + producto.getNombre());
+            if (producto.getNombre().toLowerCase().contains(nombre)) {
+
+                return producto;
+            }
+        }
+        return null;
+    }
+
 
 }
